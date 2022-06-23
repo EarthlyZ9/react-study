@@ -15,14 +15,14 @@ const ExpenseForm = (props) => {
     };
 
     const dateChangeHandler = (event) => {
-        setEnteredTitle(event.target.value);
+        setEnteredDate(event.target.value);
     };
 
     const submitHandler = (event) => {
         event.preventDefault(); // prevent reload
         const expenseData = {
             title: enteredTitle,
-            amount: enteredAmount,
+            amount: +enteredAmount, // to number
             date: new Date(enteredDate)
         };
         props.onSaveExpenseData(expenseData); // NewExpense 가 리슨하고 있는 이벤트 trigger
@@ -31,7 +31,13 @@ const ExpenseForm = (props) => {
         setEnteredDate("");
     };
 
+    // const cancelButtonHandler = () => {
+    //     props.onSetExpandButton(false);
+    // };
+
     return (
+
+
         <form onSubmit={submitHandler}>
             <div className="new-expense__controls">
                 <div className="new-expense__control">
@@ -49,6 +55,7 @@ const ExpenseForm = (props) => {
                 </div>
             </div>
             <div className="new-expense__actions">
+                <button type="button" onClick={props.onCancel}>Cancel</button>
                 <button type="submit">Add Expense</button>
             </div>
         </form>
