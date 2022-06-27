@@ -16,13 +16,9 @@ MERN 풀스택 이라는 험난한 여정의 "두번째" 걸음,,,
 
 ### 💡 Summary
 
-지출 내역을 추가하고 조회할 수 있다!
+1. 리액트 이해하기: Component, State, Composition, Input Form
+    * Mini project: 지출 내역 조회 및 추가하기
 
 #### 🗓 2022.06 ~
 
-#### 📋 Features
 
-* 회원 관리: 로그인/로그아웃, 회원가입
-* 장소 데이터 CRUD
-* geocoding API 를 이용한 좌표 찍기
-* 이미지 파일 업로드
